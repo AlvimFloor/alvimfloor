@@ -152,7 +152,7 @@ export default function Home() {
             </div>
           </div>
                 
-          <footer className="bg-gray-900 text-white py-6">
+          <footer className="bg-[#776B5D] text-white py-6">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div>
