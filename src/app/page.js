@@ -2,6 +2,8 @@ import Image from 'next/image';
 import HeaderComponent from './components/header/header';
 import Banner from '../../public/banner.svg';
 import LandingPageImage1 from '@/../public/landing1.svg';
+import FooterComponent from './components/footer/footer';
+import Contactphoto from '../../public/contactphoto.svg'
 
 export default function Home() {
   return (
@@ -19,8 +21,8 @@ export default function Home() {
               Discover more
             </button>
           </div>
-          <div className="hidden md:block sm:hidden">
-            <Image src={Banner} alt="Banner" />
+          <div className="hidden md:block sm:hidden w-full">
+            <Image src={Banner} alt="Banner" className='w-full' />
           </div>
         </div>
         <div className="flex p-10 justify-center gap-10 my-32">
@@ -113,80 +115,47 @@ export default function Home() {
             <div className="bg-gray-300 w-40 h-40 p-10 mt-10"></div>
             <div className="bg-gray-300 w-40 h-40 p-10 mt-10"></div>
           </div>
-          <div className="bg-[#776B5D] h-screen p-10">
-            <p className="text-center italic">
-              Customer Reviews
-            </p>
-            <h1 className="text-center text-2xl font-bold mt-4">
-              Recently, I hired the services of Alvim Floor for the installation of vinyl flooring in my residence. 
-              I was extremely satisfied with the efficiency of the team and the quality of the installed floor. 
-              The new floor gave a modern and cozy look to my house. Definitely, I would recommend their services to my friends and family.Recently,
-              I hired the services of Alvim Floor for the installation of vinyl flooring in my residence. I was extremely satisfied with the efficiency 
-              of the team and the quality of the installed floor. The new floor gave a modern and cozy look to my house. Definitely,
-              I would recommend their services to my friends and family.
-            </h1>
+
+        </div>
+        <div className="bg-[#EDDBC7] h-screen p-10">
+          <p className="text-center italic">
+            Customer Reviews
+          </p>
+          <h1 className="text-center text-2xl font-bold mt-4">
+            Recently, I hired the services of Alvim Floor for the installation of vinyl flooring in my residence.
+            I was extremely satisfied with the efficiency of the team and the quality of the installed floor.
+            The new floor gave a modern and cozy look to my house. Definitely, I would recommend their services to my friends and family.Recently,
+            I hired the services of Alvim Floor for the installation of vinyl flooring in my residence. I was extremely satisfied with the efficiency
+            of the team and the quality of the installed floor. The new floor gave a modern and cozy look to my house. Definitely,
+            I would recommend their services to my friends and family.
+          </h1>
+        </div>
+        <div className="flex flex-row justify-center gap-10">
+          <div className="w-1/2">
+            <Image src={Contactphoto} alt="Landing Page Image 1" />
           </div>
-          <div className="flex flex-row justify-center gap-10">
-            <div className="w-1/2">
-              <Image src={LandingPageImage1} alt="Landing Page Image 1" />
-            </div>
-            <div className="w-1/2">
-              <div className="bg-white p-8 rounded-lg shadow-md">
-                <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
-                <form>
-                  <div className="mb-4">
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name</label>
-                    <input type="text" id="name" name="name" className="mt-1 px-3 py-2 border border-gray-300 rounded-md w-full" />
-                  </div>
-                  <div className="mb-4">
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
-                    <input type="email" id="email" name="email" className="mt-1 px-3 py-2 border border-gray-300 rounded-md w-full" />
-                  </div>
-                  <div className="mb-4">
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message</label>
-                    <textarea id="message" name="message" rows="4" className="mt-1 px-3 py-2 border border-gray-300 rounded-md w-full"></textarea>
-                  </div>
-                  <button type="submit" className="bg-[#EBE3D5] text-black px-4 py-2 rounded-md font-bold">Submit</button>
-                </form>
-              </div>
-            </div>
-          </div>
-                
-          <footer className="bg-[#776B5D] text-white py-6">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div>
-              <h3 className="text-2xl font-bold mb-4">Contact Us</h3>
-              <ul>
-                <li>Email: alvimfloor@gmail.com</li>
-                <li>Phone: +1 123 456 789</li>
-                <li>Address: 123 Street, City, Country</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-2xl font-bold mb-4">Quick Links</h3>
-              <ul>
-                <li>About Us</li>
-                <li>Services</li>
-                <li>Portfolio</li>
-                <li>Contact</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-2xl font-bold mb-4">social midia</h3>
-              <ul>
-                <li>WhatsApp</li>
-                <li>Facebook</li>
-                <li>Instagram</li> 
-              </ul>
+          <div className="w-1/2 my-auto mx-10">
+            <div className="bg-white p-8 rounded-lg shadow-md">
+              <h2 className="text-2xl font-bold mb-4 text-black">Contact Us</h2>
+              <form className='text-black'>
+                <div className="mb-4">
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name</label>
+                  <input type="text" id="name" name="name" className="mt-1 px-3 py-2 border border-gray-300 rounded-md w-full" />
+                </div>
+                <div className="mb-4">
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
+                  <input type="email" id="email" name="email" className="mt-1 px-3 py-2 border border-gray-300 rounded-md w-full" />
+                </div>
+                <div className="mb-4">
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message</label>
+                  <textarea id="message" name="message" rows="4" className="mt-1 px-3 py-2 border border-gray-300 rounded-md w-full resize-none"></textarea>
+                </div>
+                <button type="submit" className="bg-[#EBE3D5] text-black px-4 py-2 rounded-md font-bold w-full">Submit</button>
+              </form>
             </div>
           </div>
         </div>
-        <div className="text-center mt-6">
-          <p>&copy; 2024 Your Company. All Rights Reserved.</p>
-        </div>
-      </footer>
-        </div>
+        <FooterComponent />
       </div>
     </section>
   );
