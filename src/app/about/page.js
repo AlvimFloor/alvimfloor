@@ -24,8 +24,8 @@ export default function AboutPage() {
                     </div>
                 </div>
             </div>
-            <div className="flex justify-end"> {/* Modified line */}
-                <div className="w-1/2">
+            <div className="flex justify-end h-screen"> 
+                <div className="w-1/2 h-screen">
                     <Image src={Banner} alt="Banner" /> 
                 </div>
                 <div className="w-1/2 flex flex-col justify-center items-center">
