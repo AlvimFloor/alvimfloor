@@ -7,7 +7,7 @@ const data = [
           "width": "8.97",
           "length": "70.86",
           "overall_thickness": "7mm",
-          "planks/carton": "4",
+          "planks_carton": "4",
           "image": {
                "floor": "/floors/see_salt.png",
                "example": "/floors/see_salt_example.png"
@@ -22,7 +22,7 @@ const data = [
           "width": "8.97",
           "length": "70.86",
           "overall_thickness": "7mm",
-          "planks/carton": "4",
+          "planks_carton": "4",
           "image": {
                "floor": "/floors/oyster.png",
                "example": "/floors/oyster_example.png"
@@ -37,7 +37,7 @@ const data = [
           "width": "8.97",
           "length": "70.86",
           "overall_thickness": "7mm",
-          "planks/carton": "4",
+          "planks_carton": "4",
           "image": {
                "floor": "/floors/porcini.png",
                "example": "/floors/porcini_example.png"
@@ -52,7 +52,7 @@ const data = [
           "width": "8.97",
           "length": "70.86",
           "overall_thickness": "7mm",
-          "planks/carton": "4",
+          "planks_carton": "4",
           "image": {
                "floor": "/floors/biscoitti.png",
                "example": "/floors/biscoitti_example.png"
@@ -67,7 +67,7 @@ const data = [
           "width": "8.97",
           "length": "70.86",
           "overall_thickness": "7mm",
-          "planks/carton": "4",
+          "planks_carton": "4",
           "image": {
                "floor": "/floors/maple.png",
                "example": "/floors/maple_example.png"
@@ -82,7 +82,7 @@ const data = [
           "width": "8.97",
           "length": "70.86",
           "overall_thickness": "7mm",
-          "planks/carton": "4",
+          "planks_carton": "4",
           "image": {
                "floor": "/floors/bonbon.png",
                "example": "/floors/bonbon_example.png"
@@ -97,7 +97,7 @@ const data = [
           "width": "8.97",
           "length": "70.86",
           "overall_thickness": "7mm",
-          "planks/carton": "4",
+          "planks_carton": "4",
           "image": {
                "floor": "/floors/truffle.png",
                "example": "/floors/truffle_example.png"
@@ -112,7 +112,7 @@ const data = [
           "width": "8.97",
           "length": "70.86",
           "overall_thickness": "7mm",
-          "planks/carton": "4",
+          "planks_carton": "4",
           "image": {
                "floor": "/floors/mocha.png",
                "example": "/floors/mocha_example.png"
@@ -127,7 +127,7 @@ const data = [
           "width": "8.97",
           "length": "70.86",
           "overall_thickness": "7mm",
-          "planks/carton": "4",
+          "planks_carton": "4",
           "image": {
                "floor": "/floors/oat.png",
                "example": "/floors/oat_example.png"
@@ -142,7 +142,7 @@ const data = [
           "width": "7",
           "length": "48",
           "overall_thickness": "4.7mm",
-          "planks/carton": "12",
+          "planks_carton": "12",
           "image": {
                "floor": "/floors/sicily.png",
                "example": "/floors/sicily_example.png"
@@ -157,7 +157,7 @@ const data = [
           "width": "7",
           "length": "48",
           "overall_thickness": "4.7mm",
-          "planks/carton": "12",
+          "planks_carton": "12",
           "image": {
                "floor": "/floors/kyoto.png",
                "example": "/floors/kyoto_example.png"
@@ -172,7 +172,7 @@ const data = [
           "width": "7",
           "length": "48",
           "overall_thickness": "4.7mm",
-          "planks/carton": "12",
+          "planks_carton": "12",
           "image": {
                "floor": "/floors/oslo.png",
                "example": "/floors/oslo_example.png"
@@ -187,7 +187,7 @@ const data = [
           "width": "7",
           "length": "48",
           "overall_thickness": "4.7mm",
-          "planks/carton": "12",
+          "planks_carton": "12",
           "image": {
                "floor": "/floors/madrid.png",
                "example": "/floors/madrid_example.png"
@@ -202,7 +202,7 @@ const data = [
           "width": "7",
           "length": "48",
           "overall_thickness": "4.7mm",
-          "planks/carton": "12",
+          "planks_carton": "12",
           "image": {
                "floor": "/floors/sydney.png",
                "example": "/floors/sydney_example.png"
@@ -217,7 +217,7 @@ const data = [
           "width": "7",
           "length": "48",
           "overall_thickness": "4.7mm",
-          "planks/carton": "12",
+          "planks_carton": "12",
           "image": {
                "floor": "/floors/venice.png",
                "example": "/floors/venice_example.png"
@@ -232,7 +232,7 @@ const data = [
           "width": "7",
           "length": "48",
           "overall_thickness": "4.7mm",
-          "planks/carton": "12",
+          "planks_carton": "12",
           "image": {
                "floor": "/floors/copa.png",
                "example": "/floors/copa_example.png"
@@ -247,7 +247,7 @@ const data = [
           "width": "7",
           "length": "48",
           "overall_thickness": "4.7mm",
-          "planks/carton": "12",
+          "planks_carton": "12",
           "image": {
                "floor": "/floors/berlin.png",
                "example": "/floors/berlin_example.png"
@@ -262,7 +262,7 @@ const data = [
           "width": "7",
           "length": "48",
           "overall_thickness": "4.7mm",
-          "planks/carton": "12",
+          "planks_carton": "12",
           "image": {
                "floor": "/floors/cancun.png",
                "example": "/floors/cancun_example.png"
@@ -277,7 +277,7 @@ const data = [
           "width": "7",
           "length": "48",
           "overall_thickness": "4.7mm",
-          "planks/carton": "12",
+          "planks_carton": "12",
           "image": {
                "floor": "/floors/tulum.png",
                "example": "/floors/tulum_example.png"
@@ -292,7 +292,7 @@ const data = [
           "width": "7",
           "length": "48",
           "overall_thickness": "4.7mm",
-          "planks/carton": "12",
+          "planks_carton": "12",
           "image": {
                "floor": "/floors/dublin.png",
                "example": "/floors/dublin_example.png"
@@ -307,7 +307,7 @@ const data = [
           "width": "7",
           "length": "48",
           "overall_thickness": "4.7mm",
-          "planks/carton": "12",
+          "planks_carton": "12",
           "image": {
                "floor": "/floors/amsterdam.png",
                "example": "/floors/amsterdam_example.png"
@@ -322,7 +322,7 @@ const data = [
           "width": "7",
           "length": "48",
           "overall_thickness": "5mm",
-          "planks/carton": "10",
+          "planks_carton": "10",
           "image": {
                "floor": "/floors/captiva.png",
                "example": "/floors/captiva_example.png"
@@ -337,7 +337,7 @@ const data = [
           "width": "7",
           "length": "48",
           "overall_thickness": "5mm",
-          "planks/carton": "10",
+          "planks_carton": "10",
           "image": {
                "floor": "/floors/oakwood.png",
                "example": "/floors/oakwood_example.png"
@@ -352,7 +352,7 @@ const data = [
           "width": "7",
           "length": "48",
           "overall_thickness": "5mm",
-          "planks/carton": "10",
+          "planks_carton": "10",
           "image": {
                "floor": "/floors/cannes.png",
                "example": "/floors/cannes_example.png"
@@ -367,7 +367,7 @@ const data = [
           "width": "7",
           "length": "48",
           "overall_thickness": "5mm",
-          "planks/carton": "10",
+          "planks_carton": "10",
           "image": {
                "floor": "/floors/biscayne.png",
                "example": "/floors/biscayne_example.png"
@@ -382,7 +382,7 @@ const data = [
           "width": "7",
           "length": "48",
           "overall_thickness": "5mm",
-          "planks/carton": "10",
+          "planks_carton": "10",
           "image": {
                "floor": "/floors/brighton.png",
                "example": "/floors/brighton_example.png"
@@ -397,7 +397,7 @@ const data = [
           "width": "7",
           "length": "48",
           "overall_thickness": "5mm",
-          "planks/carton": "10",
+          "planks_carton": "10",
           "image": {
                "floor": "/floors/myrtle_beach.png",
                "example": "/floors/myrtle_beach_example.png"
@@ -412,7 +412,7 @@ const data = [
           "width": "7",
           "length": "48",
           "overall_thickness": "5mm",
-          "planks/carton": "10",
+          "planks_carton": "10",
           "image": {
                "floor": "/floors/islamorada.png",
                "example": "/floors/islamorada_example.png"
@@ -427,7 +427,7 @@ const data = [
           "width": "7",
           "length": "48",
           "overall_thickness": "5mm",
-          "planks/carton": "10",
+          "planks_carton": "10",
           "image": {
                "floor": "/floors/amelia.png",
                "example": "/floors/amelia_example.png"
@@ -442,7 +442,7 @@ const data = [
           "width": "7",
           "length": "48",
           "overall_thickness": "5mm",
-          "planks/carton": "10",
+          "planks_carton": "10",
           "image": {
                "floor": "/floors/blue_sands.png",
                "example": "/floors/blue_sands_example.png"
@@ -457,7 +457,7 @@ const data = [
           "width": "7",
           "length": "48",
           "overall_thickness": "5mm",
-          "planks/carton": "10",
+          "planks_carton": "10",
           "image": {
                "floor": "/floors/loredo.png",
                "example": "/floors/loredo_example.png"
@@ -472,7 +472,7 @@ const data = [
           "width": "7",
           "length": "48",
           "overall_thickness": "5mm",
-          "planks/carton": "10",
+          "planks_carton": "10",
           "image": {
                "floor": "/floors/gray_venice_beach.png",
                "example": "/floors/gray_venice_beach_example.png"
@@ -487,7 +487,7 @@ const data = [
           "width": "7",
           "length": "48",
           "overall_thickness": "5mm",
-          "planks/carton": "10",
+          "planks_carton": "10",
           "image": {
                "floor": "/floors/venice_beach.png",
                "example": "/floors/venice_beach_example.png"
@@ -502,7 +502,7 @@ const data = [
           "width": "7",
           "length": "48",
           "overall_thickness": "5mm",
-          "planks/carton": "10",
+          "planks_carton": "10",
           "image": {
                "floor": "/floors/mancora.png",
                "example": "/floors/mancora_example.png"
@@ -517,7 +517,7 @@ const data = [
           "width": "7",
           "length": "48",
           "overall_thickness": "5mm",
-          "planks/carton": "10",
+          "planks_carton": "10",
           "image": {
                "floor": "/floors/rehoboth.png",
                "example": "/floors/rehoboth_example.png"
@@ -532,7 +532,7 @@ const data = [
           "width": "7",
           "length": "48",
           "overall_thickness": "5mm",
-          "planks/carton": "10",
+          "planks_carton": "10",
           "image": {
                "floor": "/floors/mile_high.png",
                "example": "/floors/mile_high_example.png"
@@ -547,7 +547,7 @@ const data = [
           "width": "7",
           "length": "48",
           "overall_thickness": "5mm",
-          "planks/carton": "10",
+          "planks_carton": "10",
           "image": {
                "floor": "/floors/palomino.png",
                "example": "/floors/palomino_example.png"
@@ -562,7 +562,7 @@ const data = [
           "width": "7",
           "length": "48",
           "overall_thickness": "5mm",
-          "planks/carton": "10",
+          "planks_carton": "10",
           "image": {
                "floor": "/floors/wildwood_crest.png",
                "example": "/floors/wildwood_crest_example.png"
@@ -577,7 +577,7 @@ const data = [
           "width": "7",
           "length": "48",
           "overall_thickness": "5mm",
-          "planks/carton": "10",
+          "planks_carton": "10",
           "image": {
                "floor": "/floors/santorini.png",
                "example": "/floors/santorini_example.png"
@@ -592,7 +592,7 @@ const data = [
           "width": "7",
           "length": "48",
           "overall_thickness": "7mm",
-          "planks/carton": "6",
+          "planks_carton": "6",
           "image": {
                "floor": "/floors/woolworth.png",
                "example": "/floors/woolworth_example.png"
@@ -607,7 +607,7 @@ const data = [
           "width": "7",
           "length": "48",
           "overall_thickness": "7mm",
-          "planks/carton": "6",
+          "planks_carton": "6",
           "image": {
                "floor": "/floors/dresden.png",
                "example": "/floors/dresden_example.png"
@@ -622,7 +622,7 @@ const data = [
           "width": "7",
           "length": "48",
           "overall_thickness": "7mm",
-          "planks/carton": "6",
+          "planks_carton": "6",
           "image": {
                "floor": "/floors/sistine.png",
                "example": "/floors/sistine_example.png"
@@ -637,7 +637,7 @@ const data = [
           "width": "7",
           "length": "48",
           "overall_thickness": "7mm",
-          "planks/carton": "6",
+          "planks_carton": "6",
           "image": {
                "floor": "/floors/gherkin.png",
                "example": "/floors/gherkin_example.png"
@@ -652,7 +652,7 @@ const data = [
           "width": "7",
           "length": "48",
           "overall_thickness": "7mm",
-          "planks/carton": "6",
+          "planks_carton": "6",
           "image": {
                "floor": "/floors/savoye.png",
                "example": "/floors/savoye_example.png"
@@ -667,7 +667,7 @@ const data = [
           "width": "7",
           "length": "48",
           "overall_thickness": "7mm",
-          "planks/carton": "6",
+          "planks_carton": "6",
           "image": {
                "floor": "/floors/petronas.png",
                "example": "/floors/petronas_example.png"
@@ -682,7 +682,7 @@ const data = [
           "width": "7",
           "length": "48",
           "overall_thickness": "7mm",
-          "planks/carton": "6",
+          "planks_carton": "6",
           "image": {
                "floor": "/floors/cayan.png",
                "example": "/floors/cayan_example.png"
@@ -697,7 +697,7 @@ const data = [
           "width": "7",
           "length": "48",
           "overall_thickness": "7mm",
-          "planks/carton": "6",
+          "planks_carton": "6",
           "image": {
                "floor": "/floors/baymont.png",
                "example": "/floors/baymont_example.png"
@@ -712,7 +712,7 @@ const data = [
           "width": "7",
           "length": "48",
           "overall_thickness": "7mm",
-          "planks/carton": "6",
+          "planks_carton": "6",
           "image": {
                "floor": "/floors/wentworth.png",
                "example": "/floors/wentworth_example.png"
@@ -727,7 +727,7 @@ const data = [
           "width": "7",
           "length": "48",
           "overall_thickness": "7mm",
-          "planks/carton": "6",
+          "planks_carton": "6",
           "image": {
                "floor": "/floors/blenheim.png",
                "example": "/floors/blenheim_example.png"
@@ -742,7 +742,7 @@ const data = [
           "width": "7",
           "length": "48",
           "overall_thickness": "7mm",
-          "planks/carton": "6",
+          "planks_carton": "6",
           "image": {
                "floor": "/floors/buckingham.png",
                "example": "/floors/buckingham_example.png"
@@ -757,7 +757,7 @@ const data = [
           "width": "7",
           "length": "48",
           "overall_thickness": "7mm",
-          "planks/carton": "6",
+          "planks_carton": "6",
           "image": {
                "floor": "/floors/florence.png",
                "example": "/floors/florence_example.png"

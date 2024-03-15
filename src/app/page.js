@@ -11,7 +11,7 @@ export default function Home() {
       <HeaderComponent />
       <div>
         <div className="relative">
-          <div className="relative top-10 left-0 z-10 text-white p-10 mb-4 w-full sm:w-full md:w-1/2 sm:p-15 sm:top-20 md:text-white md:absolute">
+          <div className="relative top-10 left-0 z-10 text-black p-10 mb-4 w-full sm:w-full md:w-1/2 sm:p-15 sm:top-20 md:text-white md:absolute">
             <p className="text-sm sm:text-base font-light">Innovative designs, lasting flooring solutions</p>
             <h1 className="text-4xl sm:text-5xl font-bold">Elevate Your Space With Superior Floors</h1>
             <p className="mt-2 text-sm sm:text-base font-light">

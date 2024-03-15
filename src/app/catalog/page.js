@@ -4,19 +4,21 @@ import React, { useState } from 'react';
 import HeaderComponent from "../components/header/header";
 import data from "./data.js";
 import { Star } from 'lucide-react';
+import { redirect } from 'next/dist/server/api-utils';
+import FooterComponent from '../components/footer/footer';
 
 export default function CatalogPage() {
      const [selectedButton, setSelectedButton] = useState(null);
      const [search, setSearch] = useState('');
 
      const [ActualPage, setActualPage] = useState(1);
-     const [ItemsPerPage, setItemsPerPage] = useState(5);
+     const [ItemsPerPage] = useState(5);
 
      const handleButtonClick = (buttonName) => {
           setSelectedButton(buttonName);
      };
 
-     async function renderStars(rating) {
+     function renderStars(rating) {
           let stars = []
           for (let i = 0; i < rating; i++) {
                stars.push(
@@ -28,13 +30,27 @@ export default function CatalogPage() {
           return stars
      }
 
-     const allData = data
+
+
+     const totalItems = data.length; // Calculate total items after filtering
+     const totalPages = Math.ceil(totalItems / ItemsPerPage); // Calculate total pages
+
+     const indexOfLastItem = Math.min(ActualPage * ItemsPerPage, totalItems); // Adjust last item index
+     const indexOfFirstItem = indexOfLastItem - ItemsPerPage;
+     const currentItems = data.slice(indexOfFirstItem, indexOfLastItem);
+
+     console.log(currentItems)
+
+
+     const paginate = (pageNumber) => {
+          setActualPage(pageNumber);
+     };
 
 
      return (
           <section>
                <HeaderComponent />
-               <div>
+               <div className='my-10'>
                     <div className="w-screen">
                          <div className="text-center text-black">
                               <h1 className="text-2xl font-bold mt-10">Looking for a vinyl floor?</h1>
@@ -85,16 +101,16 @@ export default function CatalogPage() {
                     </div>
                     <div className='flex flex-col w-1/2 mx-auto py-6'>
                          {
-                              allData
+                              data
                                    .filter((item) => {
                                         if (search === '') {
                                              return item
                                         } else if (item.floor_name.toLowerCase().includes(search.toLowerCase())) {
                                              return item
                                         }
-                                   }
-                                   )
-                                   .map(async (item, index) => {
+                                   })
+                                   .slice(indexOfFirstItem, indexOfLastItem)
+                                   .map((item, index) => {
                                         return (
                                              <div key={index} className="flex justify-between mt-5  mx-auto w-full">
                                                   <div className="flex flex-row gap-4">
@@ -127,12 +143,14 @@ export default function CatalogPage() {
                                                                  <h1 className='font-bold mb-2'>Reviews</h1>
                                                                  <div className='flex gap-2'>
                                                                       {
-                                                                           await renderStars(item.rating)
+                                                                           renderStars(item.rating)
                                                                       }
                                                                  </div>
                                                             </div>
                                                        </div>
-                                                       <button className="bg-[#EBE3D5] p-2 w-full mt-4 font-bold text-black">View more</button>
+                                                       <button className="bg-[#EBE3D5] p-2 w-full mt-4 font-bold text-black" onClick={() => {
+                                                            window.location.href = `/details/${item.id}`
+                                                       }}>View more</button>
                                                   </div>
 
                                              </div>
@@ -140,9 +158,34 @@ export default function CatalogPage() {
                                    })
                          }
                     </div>
-               </div>
+                    <div className="flex justify-center mt-4 my-5">
+                         {
+                              search != ''
+                                   ?
+                                   (
+                                        <button
+                                             className={`p-4 text-black ${ActualPage === 1 ? 'bg-[#EBE3D5]' : 'bg-white'}`}
+                                             onClick={() => paginate(1)}
+                                        >
+                                             1
+                                        </button>
+                                   ) :
+                                   Array.from({ length: totalPages }).map((_, index) => (
+                                        <button
+                                             key={index}
+                                             className={`p-4 text-black ${ActualPage === index + 1 ? 'bg-[#EBE3D5]' : 'bg-white'}`}
+                                             onClick={() => paginate(index + 1)}
+                                        >
+                                             {index + 1}
+                                        </button>
+                                   ))
 
+                         }
+                    </div>
+               </div>
+               <FooterComponent />
           </section>
 
      )
 }
+

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 export default function HeaderComponent() {
      const [showOptions, setShowOptions] = useState(true);
 
@@ -19,10 +20,10 @@ export default function HeaderComponent() {
 
                <div className={showOptions ? 'block' : 'hidden'}>
                     <ul className="text-black flex flex-row mt-5 md:flex-row gap-10 md:mt-0">
-                         <li className="hover:font-bold hover:cursor-pointer transition-all ease-out text-xs md:text-base">Home</li>
-                         <li className="hover:font-bold hover:cursor-pointer transition-all ease-out text-xs md:text-base">About us</li>
-                         <li className="hover:font-bold hover:cursor-pointer transition-all ease-out text-xs md:text-base">Catalog</li>
-                         <li className="hover:font-bold hover:cursor-pointer transition-all ease-out text-xs md:text-base">Contact us</li>
+                         <li className="hover:font-bold hover:cursor-pointer transition-all ease-out text-xs md:text-base"><Link href={`/`}>Home</Link></li>
+                         <li className="hover:font-bold hover:cursor-pointer transition-all ease-out text-xs md:text-base"><Link href={`/about`}>About us</Link></li>
+                         <li className="hover:font-bold hover:cursor-pointer transition-all ease-out text-xs md:text-base"><Link href={`/catalog`}>Catalog</Link></li>
+                         <li className="hover:font-bold hover:cursor-pointer transition-all ease-out text-xs md:text-base"><Link href={`/contact`}>Contact us</Link></li>
                     </ul>
                </div>
           </div>
