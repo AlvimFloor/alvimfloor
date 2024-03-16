@@ -33,7 +33,13 @@ export default function Page({ params }) {
      }
 
      function getRandomFloor() {
-          const random = Math.floor(Math.random() * data.length);
+          let random;
+          let isDuplicate = true;
+
+          while (isDuplicate) {
+               random = Math.floor(Math.random() * data.length);
+               isDuplicate = randomFloor.some(item => item.id === data[random].id);
+          }
 
           setRandomFloor(prevRandomFloor => [...prevRandomFloor, { id: data[random].id, floor_name: data[random].floor_name, image: data[random].image }]);
      }
@@ -62,13 +68,14 @@ export default function Page({ params }) {
           <section>
                <HeaderComponent />
                <div className="p-10">
-                    <div className="text-black my-10">
+                    <div className="text-black my-10 h-screen">
                          {floor.length !== 0 ? (
                               <div>
+                                   <h1 className="text-4xl font-bold text-center mb-5">{floor.floor_name}</h1>
                                    {floor.image && (
                                         <div>
-                                             <div className="flex justify-center gap-5 flex-wrap">
-                                                  <div className="text-right">
+                                             <div className="flex justify-center gap-10">
+                                                  <div className="text-right w-1/3">
                                                        <h1 className="text-2xl font-semibold">Details</h1>
                                                        <ul>
                                                             <li>
@@ -91,17 +98,17 @@ export default function Page({ params }) {
                                                             </li>
                                                        </ul>
                                                   </div>
-                                                  <img
-                                                       src={floor.image.floor}
-                                                       alt="floor"
-                                                       width={500}
-                                                       height={500}
-                                                       className="select-none"
-                                                       loading="lazy"
-                                                  />
-
-                                                  <div>
-                                                       <h1 className="text-2xl font-semibold">{floor.floor_name}</h1>
+                                                  <div className="w-1/3">
+                                                       <img
+                                                            src={floor.image.floor}
+                                                            alt="floor"
+                                                            width={500}
+                                                            height={500}
+                                                            className="select-none"
+                                                            loading="lazy"
+                                                       />
+                                                  </div>
+                                                  <div className="w-1/3">
                                                        <p>
                                                             {floor.description ? floor.description : "No description"}
                                                        </p>

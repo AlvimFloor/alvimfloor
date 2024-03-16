@@ -7,29 +7,22 @@ import { Star } from 'lucide-react';
 import { redirect } from 'next/dist/server/api-utils';
 import FooterComponent from '../components/footer/footer';
 
+
+
+
+
+
+
 export default function CatalogPage() {
      const [selectedButton, setSelectedButton] = useState(null);
      const [search, setSearch] = useState('');
 
      const [ActualPage, setActualPage] = useState(1);
-     const [ItemsPerPage] = useState(5);
+     const [ItemsPerPage, setItemsPerPage] = useState(5);
 
      const handleButtonClick = (buttonName) => {
           setSelectedButton(buttonName);
      };
-
-     function renderStars(rating) {
-          let stars = []
-          for (let i = 0; i < rating; i++) {
-               stars.push(
-                    <div className='flex flex-row'>
-                         <Star className='w-5 h-5 text-yellow-400' />
-                    </div>
-               )
-          }
-          return stars
-     }
-
 
 
      const totalItems = data.length; // Calculate total items after filtering
@@ -62,7 +55,11 @@ export default function CatalogPage() {
                               <input
                                    type="text"
                                    placeholder="Search for a floor"
-                                   onChange={(e) => setSearch(e.target.value)}
+                                   onChange={(e) => {
+                                        setSearch(e.target.value)
+                                        setActualPage(1)
+                                        setItemsPerPage(40)
+                                   }}
                                    className="border-[#D9D9D9] border-2 mt-5 rounded-[8px] p-2 text-black w-full" />
                               <div className="flex justify-center mt-4">
                                    <button
@@ -99,7 +96,7 @@ export default function CatalogPage() {
 
                          </div>
                     </div>
-                    <div className='flex flex-col w-1/2 mx-auto py-6'>
+                    <div className='flex flex-col w-full mx-auto py-6 px-10'>
                          {
                               data
                                    .filter((item) => {
@@ -139,18 +136,14 @@ export default function CatalogPage() {
                                                                       </li>
                                                                  </ul>
                                                             </div>
-                                                            <div className='text-black '>
-                                                                 <h1 className='font-bold mb-2'>Reviews</h1>
-                                                                 <div className='flex gap-2'>
-                                                                      {
-                                                                           renderStars(item.rating)
-                                                                      }
-                                                                 </div>
-                                                            </div>
                                                        </div>
-                                                       <button className="bg-[#EBE3D5] p-2 w-full mt-4 font-bold text-black" onClick={() => {
-                                                            window.location.href = `/details/${item.id}`
-                                                       }}>View more</button>
+                                                       <div className='flex flex-col items-end mt-auto'>
+                                                            <button className="bg-[#EBE3D5] p-2 w-full mt-4 font-bold text-black" onClick={() => {
+                                                                 window.location.href = `/details/${item.id}`
+                                                            }}>View more</button>
+                                                            <p className='text-slate-500 text-xs'>For more infos, click here</p>
+
+                                                       </div>
                                                   </div>
 
                                              </div>
