@@ -1,11 +1,49 @@
+"use client"
+import { useRef , useEffect, useState } from 'react';
 import Image from 'next/image';
 import HeaderComponent from './components/header/header';
-import Banner from '../../public/banner.svg';
+import Banner from '@/../public/banner.svg';
 import LandingPageImage1 from '@/../public/landing1.svg';
 import FooterComponent from './components/footer/footer';
-import Contactphoto from '../../public/contactphoto.svg'
+import Contactphoto from '@/../public/contactphoto.svg'
+import { motion } from 'framer-motion';
+import imagem1 from './assets/portifolio/imagem1.jpeg';
+import imagem2 from './assets/portifolio/imagem2.jpeg';
+import imagem3 from './assets/portifolio/imagem3.jpeg';
+import imagem4 from './assets/portifolio/imagem4.jpeg';
+import imagem5 from './assets/portifolio/imagem5.jpeg';
+import imagem6 from './assets/portifolio/imagem6.jpeg';
+import imagem7 from './assets/portifolio/imagem7.jpeg';
+import imagem8 from './assets/portifolio/imagem8.jpeg';
+import imagem9 from './assets/portifolio/imagem9.jpeg';
+import imagem10 from './assets/portifolio/imagem10.jpeg';
+import imagem11 from './assets/portifolio/imagem11.jpeg';
+import imagem12 from './assets/portifolio/imagem12.jpeg';
+import imagem13 from './assets/portifolio/imagem13.jpeg';
+import imagem14 from './assets/portifolio/imagem14.jpeg';
+import imagem15 from './assets/portifolio/imagem15.jpeg';
+
+
+
 
 export default function Home() {
+  
+  const imagens = [imagem1, imagem2, imagem3, imagem4, imagem5, imagem6, imagem7, imagem8, imagem9, imagem10, imagem11, imagem12, imagem13, imagem14, imagem15];
+  
+  
+   const carousel = useRef();
+   const [width, setWidth] = useState(0);
+
+   useEffect(()=> {
+      console.log(carousel.current?.scrollWidth, carousel.current?.offsetWidth)
+      setWidth(carousel.current?.scrollWidth - carousel.current?.offsetWidth + 1)
+    }, [])  
+
+
+
+
+
+
   return (
     <section>
       <HeaderComponent />
@@ -98,22 +136,27 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="bg-[#776B5D] h-screen p-10">
-          <p className="text-center italic">
-            Our portfolio
-          </p>
-          <h1 className="text-center text-2xl font-bold mt-2">
-            Showcasing our flooring & Construction Masterpieces
-          </h1>
-          <div className="flex flex-row justify-center gap-10">
-            <div className="bg-gray-300 w-40 h-40 p-10 mt-10"></div>
-            <div className="bg-gray-300 w-40 h-40 p-10 mt-10"></div>
-            <div className="bg-gray-300 w-40 h-40 p-10 mt-10"></div>
-          </div>
-          <div className="flex flex-row justify-center gap-10">
-            <div className="bg-gray-300 w-40 h-40 p-10 mt-10"></div>
-            <div className="bg-gray-300 w-40 h-40 p-10 mt-10"></div>
-            <div className="bg-gray-300 w-40 h-40 p-10 mt-10"></div>
+        <div className="bg-[#776B5D] h-screen p-10 App">
+            <h1 className='font-bold text-center text-4xl mt-10 mb-0'>Our Portifoil</h1>
+              <motion.div ref={carousel}
+              className='carousel' 
+              whileTap={{cursor: "grabbing" }}>
+                  <motion.div 
+                  className='inner' 
+                  drag="x"
+                  dragConstraints={{right: 0, left: -width}}
+                  initial={{x: 100}}
+                  animate={{x: 0}}
+                  transition={{duration: 0.8}}
+                  >
+                  {imagens.map(imagens => (
+                    <motion.div className='item' key={Math.floor(Math.random() * 321)}>
+                      <Image src={imagens} alt="Texto alt" loading='lazy' />
+                    </motion.div>
+                  ))  }
+                  </motion.div>
+              </motion.div>
+      
           </div>
 
         </div>
@@ -156,8 +199,8 @@ export default function Home() {
           </div>
         </div>
         <FooterComponent />
-      </div>
-    </section>
-  );
+
+        </section>
+      );
 }
 
