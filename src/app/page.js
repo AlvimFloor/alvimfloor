@@ -130,8 +130,8 @@ export default function Home() {
             I would recommend their services to my friends and family.
           </h1>
         </div>
-        <div className="flex flex-row justify-center gap-10">
-          <div className="w-1/2">
+        <div className="flex flex-row justify-center gap-10 p-10 md:p-0">
+          <div className="hidden w-full md:block md:w-1/2">
             <Image src={Contactphoto} alt="Landing Page Image 1" />
           </div>
           <div className="w-1/2 my-auto mx-10">
