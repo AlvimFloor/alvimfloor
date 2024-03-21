@@ -155,11 +155,11 @@ export default function Home() {
           </div>
 
         </div>
-        <div className="bg-[#EDDBC7] h-screen p-10">
-          <p className="text-center italic">
-            Customer Reviews
+        <div className="flex flex-col justify-center bg-[#EDDBC7]  p-10 py-32">
+          <p className="text-2xl text-center italic text-black">
+            Reviews
           </p>
-          <h1 className="text-center text-2xl font-bold mt-4">
+          <h1 className="text-center text-md italic font-light text-black mt-4">
             Recently, I hired the services of Alvim Floor for the installation of vinyl flooring in my residence.
             I was extremely satisfied with the efficiency of the team and the quality of the installed floor.
             The new floor gave a modern and cozy look to my house. Definitely, I would recommend their services to my friends and family.Recently,
@@ -168,8 +168,8 @@ export default function Home() {
             I would recommend their services to my friends and family.
           </h1>
         </div>
-        <div className="flex flex-row justify-center gap-10">
-          <div className="w-1/2">
+        <div className="flex flex-row justify-center gap-10 p-10 md:p-0">
+          <div className="hidden w-full md:block md:w-1/2">
             <Image src={Contactphoto} alt="Landing Page Image 1" />
           </div>
           <div className="w-1/2 my-auto mx-10">
