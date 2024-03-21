@@ -1,5 +1,5 @@
 "use client"
-import { useRef , useEffect, useState } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import Image from 'next/image';
 import HeaderComponent from './components/header/header';
 import Banner from '@/../public/banner.svg';
@@ -27,17 +27,17 @@ import imagem15 from './assets/portifolio/imagem15.jpeg';
 
 
 export default function Home() {
-  
-  const imagens = [imagem1, imagem2, imagem3, imagem4, imagem5, imagem6, imagem7, imagem8, imagem9, imagem10, imagem11, imagem12, imagem13, imagem14, imagem15];
-  
-  
-   const carousel = useRef();
-   const [width, setWidth] = useState(0);
 
-   useEffect(()=> {
-      console.log(carousel.current?.scrollWidth, carousel.current?.offsetWidth)
-      setWidth(carousel.current?.scrollWidth - carousel.current?.offsetWidth + 1)
-    }, [])  
+  const imagens = [imagem1, imagem2, imagem3, imagem4, imagem5, imagem6, imagem7, imagem8, imagem9, imagem10, imagem11, imagem12, imagem13, imagem14, imagem15];
+
+
+  const carousel = useRef();
+  const [width, setWidth] = useState(0);
+
+  useEffect(() => {
+    console.log(carousel.current?.scrollWidth, carousel.current?.offsetWidth)
+    setWidth(carousel.current?.scrollWidth - carousel.current?.offsetWidth + 1)
+  }, [])
 
   return (
     <section>
@@ -62,7 +62,7 @@ export default function Home() {
           <div className="hidden md:block sm:hidden">
             <Image src={LandingPageImage1} alt="Landing Page Image 1" />
           </div>
-          <div className="text-black w-1/2">
+          <div className="text-black w-1/2 text-center md:text-left">
             <p>
               Transform your space with Exceptional flooring solutions
             </p>
@@ -82,8 +82,8 @@ export default function Home() {
           <p className="w-1/2 mx-auto mt-2">
             We offer superior services, dedicated customer support, and competitive pricing. Our team of professionals is committed to ensuring your satisfaction.
           </p>
-          <div className="flex flex-col justify-center gap-5 mt-10">
-            <div className="flex flex-row justify-center gap-10">
+          <div className="flex flex-col flex-wrap md:flex-nowrap justify-center gap-5 mt-10">
+            <div className="flex flex-row flex-wrap md:flex-nowrap justify-center gap-5">
               <div className="card rounded-lg border-red-100 border-2 p-10 w-[340px] hover:scale-[1.05] transition-all ease-in">
                 <h1 className="text-red-600 font-bold my-2">Expert Craftsmanship</h1>
                 <hr />
@@ -92,110 +92,110 @@ export default function Home() {
                 </p>
               </div>
               <div className="card rounded-lg border-red-100 border-2 p-10 w-[340px] hover:scale-[1.05] transition-all ease-in">
-                <h1 className="text-red-600 font-bold my-2">Expert Craftsmanship</h1>
+                <h1 className="text-red-600 font-bold my-2">Exemplary Customer Service</h1>
                 <hr />
                 <p className="my-2 text-red-400">
-                  Emphasize the high level of skills and attention to details in your flooring installations
+                  Our team is dedicated to ensuring the total satisfaction of our customers, providing high quality service.
                 </p>
               </div>
               <div className="card rounded-lg border-red-100 border-2 p-10 w-[340px] hover:scale-[1.05] transition-all ease-in">
-                <h1 className="text-red-600 font-bold my-2">Expert Craftsmanship</h1>
+                <h1 className="text-red-600 font-bold my-2">High Quality Materials</h1>
                 <hr />
                 <p className="my-2 text-red-400">
-                  Emphasize the high level of skills and attention to details in your flooring installations
+                  We only use top-tier materials in our installations, ensuring durability and beauty.
                 </p>
               </div>
             </div>
-            <div className="flex flex-row justify-center gap-10">
+            <div className="flex flex-row flex-wrap md:flex-nowrap justify-center gap-10">
               <div className="card rounded-lg border-red-100 border-2 p-10 w-[340px] hover:scale-[1.05] transition-all ease-in">
-                <h1 className="text-red-600 font-bold my-2">Expert Craftsmanship</h1>
+                <h1 className="text-red-600 font-bold my-2">Proven Experience</h1>
                 <hr />
                 <p className="my-2 text-red-400">
-                  Emphasize the high level of skills and attention to details in your flooring installations
+                  With years of experience in the market, we have the necessary knowledge to execute all projects with excellence.
                 </p>
               </div>
               <div className="card rounded-lg border-red-100 border-2 p-10 w-[340px] hover:scale-[1.05] transition-all ease-in">
-                <h1 className="text-red-600 font-bold my-2">Expert Craftsmanship</h1>
+                <h1 className="text-red-600 font-bold my-2">Competitive Prices</h1>
                 <hr />
                 <p className="my-2 text-red-400">
-                  Emphasize the high level of skills and attention to details in your flooring installations
+                  We offer fair prices without compromising the quality of our work.
                 </p>
               </div>
               <div className="card rounded-lg border-red-100 border-2 p-10 w-[340px] hover:scale-[1.05] transition-all ease-in">
-                <h1 className="text-red-600 font-bold my-2">Expert Craftsmanship</h1>
+                <h1 className="text-red-600 font-bold my-2">Compliance with Deadlines</h1>
                 <hr />
                 <p className="my-2 text-red-400">
-                  Emphasize the high level of skills and attention to details in your flooring installations
+                  We respect established deadlines, ensuring the completion of projects on time.
                 </p>
               </div>
             </div>
           </div>
         </div>
         <div className="bg-[#776B5D] h-screen p-10 App">
-            <h1 className='font-bold text-center text-4xl mt-10 mb-0'>Our Portifoil</h1>
-              <motion.div ref={carousel}
-              className='carousel' 
-              whileTap={{cursor: "grabbing" }}>
-                  <motion.div 
-                  className='inner' 
-                  drag="x"
-                  dragConstraints={{right: 0, left: -width}}
-                  initial={{x: 200}}
-                  animate={{x: 0}}
-                  transition={{duration: 0.8}}
-                  >
-                  {imagens.map(imagens => (
-                    <motion.div className='item' key={Math.floor(Math.random() * 321)}>
-                      <Image src={imagens} alt="Texto alt" loading='lazy' />
-                    </motion.div>
-                  ))  }
-                  </motion.div>
-              </motion.div>
-      
-          </div>
+          <h1 className='font-bold text-center text-4xl mt-10 mb-0'>Our Portfolio</h1>
+          <motion.div ref={carousel}
+            className='carousel'
+            whileTap={{ cursor: "grabbing" }}>
+            <motion.div
+              className='inner'
+              drag="x"
+              dragConstraints={{ right: width + 1, left: -width }}
+              initial={{ x: 200 }}
+              animate={{ x: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              {imagens.map(imagens => (
+                <motion.div className='item' key={Math.floor(Math.random() * 321)}>
+                  <Image src={imagens} alt="Texto alt" loading='lazy' />
+                </motion.div>
+              ))}
+            </motion.div>
+          </motion.div>
 
         </div>
-        <div className="flex flex-col justify-center bg-[#EDDBC7]  p-10 py-32">
-          <p className="text-2xl text-center italic text-black">
-            Reviews
-          </p>
-          <h1 className="text-center text-md italic font-light text-black mt-4">
-            Recently, I hired the services of Alvim Floor for the installation of vinyl flooring in my residence.
-            I was extremely satisfied with the efficiency of the team and the quality of the installed floor.
-            The new floor gave a modern and cozy look to my house. Definitely, I would recommend their services to my friends and family.Recently,
-            I hired the services of Alvim Floor for the installation of vinyl flooring in my residence. I was extremely satisfied with the efficiency
-            of the team and the quality of the installed floor. The new floor gave a modern and cozy look to my house. Definitely,
-            I would recommend their services to my friends and family.
-          </h1>
-        </div>
-        <div className="flex flex-row justify-center gap-10 p-10 md:p-0">
-          <div className="hidden w-full md:block md:w-1/2">
-            <Image src={Contactphoto} alt="Landing Page Image 1" />
-          </div>
-          <div className="w-1/2 my-auto mx-10">
-            <div className="bg-white p-8 rounded-lg shadow-md">
-              <h2 className="text-2xl font-bold mb-4 text-black">Contact Us</h2>
-              <form className='text-black'>
-                <div className="mb-4">
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name</label>
-                  <input type="text" id="name" name="name" className="mt-1 px-3 py-2 border border-gray-300 rounded-md w-full" />
-                </div>
-                <div className="mb-4">
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
-                  <input type="email" id="email" name="email" className="mt-1 px-3 py-2 border border-gray-300 rounded-md w-full" />
-                </div>
-                <div className="mb-4">
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message</label>
-                  <textarea id="message" name="message" rows="4" className="mt-1 px-3 py-2 border border-gray-300 rounded-md w-full resize-none"></textarea>
-                </div>
-                <button type="submit" className="bg-[#EBE3D5] text-black px-4 py-2 rounded-md font-bold w-full">Submit</button>
-              </form>
-            </div>
-          </div>
-        </div>
-        <FooterComponent />
 
-        </section>
-      );
+      </div>
+      <div className="flex flex-col justify-center bg-[#EDDBC7]  p-10 py-32">
+        <p className="text-2xl text-center italic text-black">
+          Reviews
+        </p>
+        <h1 className="text-center text-md italic font-light text-black mt-4 w-9/12 mx-auto">
+          Recently, I hired the services of Alvim Floor for the installation of vinyl flooring in my residence.
+          I was extremely satisfied with the efficiency of the team and the quality of the installed floor.
+          The new floor gave a modern and cozy look to my house. Definitely, I would recommend their services to my friends and family.Recently,
+          I hired the services of Alvim Floor for the installation of vinyl flooring in my residence. I was extremely satisfied with the efficiency
+          of the team and the quality of the installed floor. The new floor gave a modern and cozy look to my house. Definitely,
+          I would recommend their services to my friends and family.
+        </h1>
+      </div>
+      <div className="flex flex-row justify-center gap-10 p-10 md:p-0">
+        <div className="hidden w-full md:block md:w-1/2">
+          <Image src={Contactphoto} alt="Landing Page Image 1" />
+        </div>
+        <div className="w-full my-auto mx-10 md:w-full">
+          <div className="bg-white p-8 rounded-lg shadow-md">
+            <h2 className="text-2xl font-bold mb-4 text-black">Contact Us</h2>
+            <form className='text-black'>
+              <div className="mb-4">
+                <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name</label>
+                <input type="text" id="name" name="name" className="mt-1 px-3 py-2 border border-gray-300 rounded-md w-full" />
+              </div>
+              <div className="mb-4">
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
+                <input type="email" id="email" name="email" className="mt-1 px-3 py-2 border border-gray-300 rounded-md w-full" />
+              </div>
+              <div className="mb-4">
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message</label>
+                <textarea id="message" name="message" rows="4" className="mt-1 px-3 py-2 border border-gray-300 rounded-md w-full resize-none"></textarea>
+              </div>
+              <button type="submit" className="bg-[#EBE3D5] text-black px-4 py-2 rounded-md font-bold w-full">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <FooterComponent />
+
+    </section>
+  );
 }
 

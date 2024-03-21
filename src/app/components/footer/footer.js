@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function FooterComponent() {
      return (
           <footer className="bg-[#776B5D] text-white py-6">
@@ -11,10 +13,10 @@ export default function FooterComponent() {
                          </div>
                          <div className="flex items-center">
                               <ul className="flex flex-row gap-10">
-                                   <li className="hover:font-bold hover:cursor-pointer transition-all ease-out text-xs md:text-base">About Us</li>
-                                   <li className="hover:font-bold hover:cursor-pointer transition-all ease-out text-xs md:text-base">Catalog</li>
-                                   <li className="hover:font-bold hover:cursor-pointer transition-all ease-out text-xs md:text-base">Portfolio</li>
-                                   <li className="hover:font-bold hover:cursor-pointer transition-all ease-out text-xs md:text-base">Contact</li>
+                                   <li className="hover:font-bold hover:cursor-pointer transition-all ease-out text-xs md:text-base"><Link href={`/`}>Home</Link></li>
+                                   <li className="hover:font-bold hover:cursor-pointer transition-all ease-out text-xs md:text-base"><Link href={`/about`}>About us</Link></li>
+                                   <li className="hover:font-bold hover:cursor-pointer transition-all ease-out text-xs md:text-base"><Link href={`/catalog`}>Catalog</Link></li>
+                                   <li className="hover:font-bold hover:cursor-pointer transition-all ease-out text-xs md:text-base"><Link href={`/contact`}>Contact us</Link></li>
                               </ul>
                          </div>
                          <div>

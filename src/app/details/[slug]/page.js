@@ -45,24 +45,6 @@ export default function Page({ params }) {
      }
 
 
-     console.log(randomFloor)
-
-
-     console.log(floor.line)
-
-     function selectBanner(brand) {
-          switch (brand) {
-               case "Azul Tortuga":
-                    return AzulTortuga;
-               case "Panzu Floooring":
-                    return Panzu;
-               case "V-EVO XL":
-                    return Vevoxl;
-               case 'V-EVO Max':
-                    return Vevoxl;
-          }
-     }
-
 
      return (
           <section>
@@ -73,46 +55,44 @@ export default function Page({ params }) {
                               <div>
                                    <h1 className="text-4xl font-bold text-center mb-5">{floor.floor_name}</h1>
                                    {floor.image && (
-                                        <div>
-                                             <div className="flex justify-center gap-10">
-                                                  <div className="text-right w-1/3">
-                                                       <h1 className="text-2xl font-semibold">Details</h1>
-                                                       <ul>
-                                                            <li>
-                                                                 <span className="font-semibold">Brand:</span> {floor.brand}
-                                                            </li>
-                                                            <li>
-                                                                 <span className="font-semibold">Line:</span> {floor.line}
-                                                            </li>
-                                                            <li>
-                                                                 <span className="font-semibold">Width:</span> {floor.width} mm
-                                                            </li>
-                                                            <li>
-                                                                 <span className="font-semibold">Length:</span> {floor.length} mm
-                                                            </li>
-                                                            <li>
-                                                                 <span className="font-semibold">Overall Thickness:</span> {floor.overall_thickness}
-                                                            </li>
-                                                            <li>
-                                                                 <span className="font-semibold">Planks/Carton:</span> {floor.planks_carton}
-                                                            </li>
-                                                       </ul>
-                                                  </div>
-                                                  <div className="w-1/3">
-                                                       <img
-                                                            src={floor.image.floor}
-                                                            alt="floor"
-                                                            width={500}
-                                                            height={500}
-                                                            className="select-none"
-                                                            loading="lazy"
-                                                       />
-                                                  </div>
-                                                  <div className="w-1/3">
-                                                       <p>
-                                                            {floor.description ? floor.description : "No description"}
-                                                       </p>
-                                                  </div>
+                                        <div className="flex flex-col md:flex-row justify-center gap-10">
+                                             <div className="text-right w-full md:w-1/3">
+                                                  <h1 className="text-2xl font-semibold">Details</h1>
+                                                  <ul>
+                                                       <li>
+                                                            <span className="font-semibold">Brand:</span> {floor.brand}
+                                                       </li>
+                                                       <li>
+                                                            <span className="font-semibold">Line:</span> {floor.line}
+                                                       </li>
+                                                       <li>
+                                                            <span className="font-semibold">Width:</span> {floor.width} mm
+                                                       </li>
+                                                       <li>
+                                                            <span className="font-semibold">Length:</span> {floor.length} mm
+                                                       </li>
+                                                       <li>
+                                                            <span className="font-semibold">Overall Thickness:</span> {floor.overall_thickness}
+                                                       </li>
+                                                       <li>
+                                                            <span className="font-semibold">Planks/Carton:</span> {floor.planks_carton}
+                                                       </li>
+                                                  </ul>
+                                             </div>
+                                             <div className="w-full md:w-1/3">
+                                                  <img
+                                                       src={floor.image.floor}
+                                                       alt="floor"
+                                                       width={500}
+                                                       height={500}
+                                                       className="select-none"
+                                                       loading="lazy"
+                                                  />
+                                             </div>
+                                             <div className="w-full md:w-1/3">
+                                                  <p>
+                                                       {floor.description ? floor.description : "No description"}
+                                                  </p>
                                              </div>
                                         </div>
                                    )}

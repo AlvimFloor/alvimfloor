@@ -61,7 +61,7 @@ export default function CatalogPage() {
                                         setItemsPerPage(40)
                                    }}
                                    className="border-[#D9D9D9] border-2 mt-5 rounded-[8px] p-2 text-black w-full" />
-                              <div className="flex justify-center mt-4">
+                              <div className="flex justify-center flex-wrap md:flex-nowrap mt-4">
                                    <button
                                         className={`p-4 text-black w-full ${selectedButton === 'Bedroom' ? 'bg-[#EBE3D5]' : 'bg-white'}`}
                                         onClick={() => handleButtonClick('Bedroom')}
