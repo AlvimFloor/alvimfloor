@@ -39,11 +39,6 @@ export default function Home() {
       setWidth(carousel.current?.scrollWidth - carousel.current?.offsetWidth + 1)
     }, [])  
 
-
-
-
-
-
   return (
     <section>
       <HeaderComponent />
@@ -145,7 +140,7 @@ export default function Home() {
                   className='inner' 
                   drag="x"
                   dragConstraints={{right: 0, left: -width}}
-                  initial={{x: 100}}
+                  initial={{x: 200}}
                   animate={{x: 0}}
                   transition={{duration: 0.8}}
                   >
