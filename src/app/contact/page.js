@@ -12,8 +12,8 @@ export default function ContactPage() {
                     <div className="w-full md:w-1/2">
                         <div className="my-20 w-30 text-center text-black p-white rounded-lg ">
                             <h2 className="text-2xl font-bold mb-4">Contact Information</h2>
-                            <p>Email: alvimfloor@gmail.com </p>
-                            <p>Phone: 123-456-7890</p>
+                            <p>Email: alvimfloors@gmail.com </p>
+                            <p>Phone: 321-662-4130</p>
                         </div>
 
                         <div className="my-10 w-30 text-center text-black p-white rounded-lg ">
