@@ -62,31 +62,7 @@ export default function CatalogPage() {
                                    }}
                                    className="border-[#D9D9D9] border-2 mt-5 rounded-[8px] p-2 text-black w-full" />
                               <div className="flex justify-center flex-wrap md:flex-nowrap mt-4">
-                                   <button
-                                        className={`p-4 text-black w-full ${selectedButton === 'Bedroom' ? 'bg-[#EBE3D5]' : 'bg-white'}`}
-                                        onClick={() => handleButtonClick('Bedroom')}
-                                   >
-                                        Bedroom
-                                   </button>
-                                   <button
-                                        className={`p-4 text-black w-full ${selectedButton === 'Bathroom' ? 'bg-[#EBE3D5]' : 'bg-white'}`}
-                                        onClick={() => handleButtonClick('Bathroom')}
-                                   >
-                                        Bathroom
-                                   </button>
-                                   <button
-                                        className={`p-4 text-black w-full ${selectedButton === 'Kitchen' ? 'bg-[#EBE3D5]' : 'bg-white'}`}
-                                        onClick={() => handleButtonClick('Kitchen')}
-                                   >
-                                        Kitchen
-                                   </button>
-                                   <button
-                                        className={`p-4 text-black w-full ${selectedButton === 'Living Room' ? 'bg-[#EBE3D5]' : 'bg-white'}`}
-                                        onClick={() => handleButtonClick('Living Room')}
-                                   >
-                                        Living Room
-                                   </button>
-                                   <select className="bg-[#EBE3D5] text-black p-2">
+                                   <select className="bg-[#EBE3D5] text-black p-2 rounded-lg">
                                         <option>Choose a filter</option>
                                         <option>Price</option>
                                         <option>Best sellers</option>
