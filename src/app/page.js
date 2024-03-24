@@ -22,6 +22,7 @@ import imagem12 from './assets/portifolio/imagem12.jpeg';
 import imagem13 from './assets/portifolio/imagem13.jpeg';
 import imagem14 from './assets/portifolio/imagem14.jpeg';
 import imagem15 from './assets/portifolio/imagem15.jpeg';
+import emailjs from '@emailjs/browser';
 
 
 
@@ -38,6 +39,22 @@ export default function Home() {
     console.log(carousel.current?.scrollWidth, carousel.current?.offsetWidth)
     setWidth(carousel.current?.scrollWidth - carousel.current?.offsetWidth + 1)
   }, [])
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault()
+    emailjs.sendForm(process.env.EMAIL_SERVICE, process.env.EMAIL_TEMPLATE, form.current, process.env.EMAIL_PUBLIC)
+      .then((result) => {
+        console.log(result.text);
+        alert("Seu email foi enviado com sucesso!")
+        setTimeout(() => {
+          window.location.reload();
+        }, 1000)
+      }, (error) => {
+        console.log(error.text);
+      });
+  }
 
   return (
     <section>
@@ -138,7 +155,7 @@ export default function Home() {
           </div>
         </div>
         <div className="bg-[#776B5D] h-fit p-10 App">
-          <h1 className='font-bold text-center text-4xl mt-10 mb-0'>Our Portfolio</h1>
+          <h1 className='font-bold text-center text-4xl mt-10 mb-0 text-white'>Our Portfolio</h1>
           <p className='text-center italic'>Drag to side</p>
           <motion.div ref={carousel}
             className='carousel'
@@ -182,7 +199,10 @@ export default function Home() {
         <div className="w-full my-auto mx-10 md:w-full">
           <div className="bg-white p-8 rounded-lg shadow-md">
             <h2 className="text-2xl font-bold mb-4 text-black">Contact Us</h2>
-            <form className='text-black'>
+            <form
+              onSubmit={(e) => sendEmail(e)}
+              ref={form}
+              className='text-black'>
               <div className="mb-4">
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name</label>
                 <input type="text" id="name" name="name" className="mt-1 px-3 py-2 border border-gray-300 rounded-md w-full" />

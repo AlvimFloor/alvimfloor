@@ -2,6 +2,9 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
+import Logo from '../../assets/logo.png'
+
 export default function HeaderComponent() {
      const [showOptions, setShowOptions] = useState(true);
 
@@ -14,8 +17,7 @@ export default function HeaderComponent() {
      return (
           <div className="p-10 flex flex-col md:flex-row justify-between items-center border-2 ">
                <button className="text-red-600" onClick={() => handleLogoClick()}>
-                    <h1 className="font-bold text-2xl m-0 p-0">Alvim.</h1>
-                    <p className="text-left">Floors</p>
+                    <Image src={Logo} alt="Logo" className="w-20 h-20" />
                </button>
 
                <div className={showOptions ? 'block' : 'hidden'}>
