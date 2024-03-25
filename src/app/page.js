@@ -71,12 +71,12 @@ export default function Home() {
             </p>
             <button onClick={() => {
               window.location.href = '/catalog'
-            }} className="bg-[#EBE3D5] p-2 w-full mt-4 font-bold text-black">
+            }} className="bg-[#EBE3D5] p-2 w-full mt-4 </div>font-bold text-black">
               Discover more
             </button>
           </div>
         </div>
-        <div className="flex p-10 justify-center gap-10 my-32">
+        <div className="flex p-10 justify-center  gap-10 my-32 ">
           <div className="hidden md:block sm:hidden">
             <Image src={LandingPageImage1} alt="Landing Page Image 1" />
           </div>
