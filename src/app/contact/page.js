@@ -59,7 +59,7 @@ export default function ContactPage() {
                                     <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message</label>
                                     <textarea id="message" name="message" rows="4" className="mt-1 px-3 py-2 border border-gray-300 rounded-md w-full"></textarea>
                                 </div>
-                                <button type="submit" className="bg-[#EBE3D5] w-full text-black px-4 py-2 rounded-md font-bold">Submit</button>
+                                <button type="submit" className="bg-[#ff3434] w-full text-black px-4 py-2 rounded-md font-bold">Submit</button>
                             </form>
                         </div>
                     </div>

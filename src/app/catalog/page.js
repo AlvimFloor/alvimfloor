@@ -8,11 +8,6 @@ import { redirect } from 'next/dist/server/api-utils';
 import FooterComponent from '../components/footer/footer';
 
 
-
-
-
-
-
 export default function CatalogPage() {
      const [selectedButton, setSelectedButton] = useState(null);
      const [search, setSearch] = useState('');
@@ -46,10 +41,8 @@ export default function CatalogPage() {
                <div className='my-10'>
                     <div className="w-screen">
                          <div className="text-center text-black">
-                              <h1 className="text-2xl font-bold mt-10">Looking for a vinyl floor?</h1>
-                              <p className="text-red-400 mt-2">
-                                   See our complete catalog
-                              </p>
+                              <h1 className="text-2xl font-bold mt-10">Step into Style: Your Premier Flooring Destination</h1>
+                              
                          </div>
                          <div className="flex flex-col justify-center w-1/2 mx-auto">
                               <input
@@ -62,7 +55,7 @@ export default function CatalogPage() {
                                    }}
                                    className="border-[#D9D9D9] border-2 mt-5 rounded-[8px] p-2 text-black w-full" />
                               <div className="flex justify-center flex-wrap md:flex-nowrap mt-4">
-                                   <select className="bg-[#EBE3D5] text-black p-2 rounded-lg">
+                                   <select className="bg-[#ff3434] text-white p-2 rounded-lg">
                                         <option>Choose a filter</option>
                                         <option>Price</option>
                                         <option>Best sellers</option>
@@ -114,7 +107,7 @@ export default function CatalogPage() {
                                                             </div>
                                                        </div>
                                                        <div className='flex flex-col items-end mt-auto'>
-                                                            <button className="bg-[#EBE3D5] p-2 w-full mt-4 font-bold text-black" onClick={() => {
+                                                            <button className="bg-[#ff3434] p-2 w-full mt-4 font-bold text-white" onClick={() => {
                                                                  window.location.href = `/details/${item.id}`
                                                             }}>View more</button>
                                                             <p className='text-slate-500 text-xs'>For more infos, click here</p>
@@ -133,7 +126,7 @@ export default function CatalogPage() {
                                    ?
                                    (
                                         <button
-                                             className={`p-4 text-black ${ActualPage === 1 ? 'bg-[#EBE3D5]' : 'bg-white'}`}
+                                             className={`p-4 text-black ${ActualPage === 1 ? 'bg-[#ff3434]' : 'bg-white'}`}
                                              onClick={() => paginate(1)}
                                         >
                                              1
@@ -142,7 +135,7 @@ export default function CatalogPage() {
                                    Array.from({ length: totalPages }).map((_, index) => (
                                         <button
                                              key={index}
-                                             className={`p-4 text-black ${ActualPage === index + 1 ? 'bg-[#EBE3D5]' : 'bg-white'}`}
+                                             className={`p-4 text-black ${ActualPage === index + 1 ? 'bg-[#ff3434]' : 'bg-white'}`}
                                              onClick={() => paginate(index + 1)}
                                         >
                                              {index + 1}

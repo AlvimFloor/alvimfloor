@@ -71,7 +71,7 @@ export default function Home() {
             </p>
             <button onClick={() => {
               window.location.href = '/catalog'
-            }} className="bg-[#EBE3D5] p-2 w-full mt-4 </div>font-bold text-black">
+            }} className="bg-[#ff3434] p-2 w-full mt-4 </div>font-bold text-white">
               Discover more
             </button>
           </div>
@@ -84,7 +84,7 @@ export default function Home() {
             <p>
               Transform your space with Exceptional flooring solutions
             </p>
-            <h1 className="text-3xl font-bold text-red-400">
+            <h1 className="text-3xl font-bold text-red-500">
               Thinking of changing your floor?
             </h1>
             <p className="mt-2">
@@ -94,12 +94,12 @@ export default function Home() {
               onClick={() => {
                 window.location.href = '/contact'
               }}
-              className="bg-[#EBE3D5] p-2 w-full mt-4 font-bold text-black">
+              className="bg-[#ff3434] p-2 w-full mt-4 font-bold text-white">
               Discover more
             </button>
           </div>
         </div>
-        <div className="p-10 text-black text-center my-24">
+        <div className="p-10 text-white text-center my-24">
           <h1 className="text-3xl font-bold text-red-400">Why choose us?</h1>
           <p className="w-full mx-auto mt-2">
             We offer superior services, dedicated customer support, and competitive pricing. Our team of professionals is committed to ensuring your satisfaction.
@@ -153,7 +153,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="bg-[#776B5D] h-fit p-10 App">
+        <div className="bg-[#ff3434] h-fit p-10 App">
           <h1 className='font-bold text-center text-4xl mt-10 mb-0 text-white'>Our Portfolio</h1>
           <p className='text-center italic'>Drag to side</p>
           <motion.div ref={carousel}
@@ -178,7 +178,7 @@ export default function Home() {
         </div>
 
       </div>
-      <div className="flex flex-col justify-center bg-[#EDDBC7]  p-10 py-32">
+      <div className="flex flex-col justify-center bg-[#efefef]  p-10 py-32">
         <p className="text-2xl text-center italic text-black">
           Reviews
         </p>
@@ -214,7 +214,7 @@ export default function Home() {
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message</label>
                 <textarea id="message" name="message" rows="4" className="mt-1 px-3 py-2 border border-gray-300 rounded-md w-full resize-none"></textarea>
               </div>
-              <button type="submit" className="bg-[#EBE3D5] text-black px-4 py-2 rounded-md font-bold w-full">Submit</button>
+              <button type="submit" className="bg-[#ff3434] text-white px-4 py-2 rounded-md font-bold w-full">Submit</button>
             </form>
           </div>
         </div>
