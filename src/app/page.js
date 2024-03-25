@@ -25,8 +25,6 @@ import imagem15 from './assets/portifolio/imagem15.jpeg';
 import emailjs from '@emailjs/browser';
 
 
-
-
 export default function Home() {
 
   const imagens = [imagem1, imagem2, imagem3, imagem4, imagem5, imagem6, imagem7, imagem8, imagem9, imagem10, imagem11, imagem12, imagem13, imagem14, imagem15];
@@ -39,12 +37,12 @@ export default function Home() {
     console.log(carousel.current?.scrollWidth, carousel.current?.offsetWidth)
     setWidth(carousel.current?.scrollWidth - carousel.current?.offsetWidth + 1)
   }, [])
-
+  q
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault()
-    emailjs.sendForm(process.env.EMAIL_SERVICE, process.env.EMAIL_TEMPLATE, form.current, process.env.EMAIL_PUBLIC)
+    emailjs.sendForm('service_y3kay5k', 'template_rxuwe1b', form.current, 'fkTiTLTO1bWNiDaMy')
       .then((result) => {
         console.log(result.text);
         alert("Seu email foi enviado com sucesso!")

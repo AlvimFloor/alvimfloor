@@ -11,7 +11,7 @@ export default function ContactPage() {
     const sendEmail = (e) => {
         e.preventDefault()
 
-        emailjs.sendForm(process.env.EMAIL_SERVICE, process.env.EMAIL_TEMPLATE, form.current, process.env.EMAIL_PUBLIC)
+        emailjs.sendForm('service_y3kay5k', 'template_rxuwe1b', form.current, 'fkTiTLTO1bWNiDaMy')
             .then((result) => {
                 console.log(result.text);
                 alert("Seu email foi enviado com sucesso!")
