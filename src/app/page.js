@@ -37,7 +37,8 @@ export default function Home() {
     console.log(carousel.current?.scrollWidth, carousel.current?.offsetWidth)
     setWidth(carousel.current?.scrollWidth - carousel.current?.offsetWidth + 1)
   }, [])
-  q
+
+
   const form = useRef();
 
   const sendEmail = (e) => {
