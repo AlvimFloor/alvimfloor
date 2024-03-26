@@ -23,7 +23,7 @@ import imagem13 from './assets/portifolio/imagem13.jpeg';
 import imagem14 from './assets/portifolio/imagem14.jpeg';
 import imagem15 from './assets/portifolio/imagem15.jpeg';
 import emailjs from '@emailjs/browser';
-
+import { ArrowLeft, ArrowRight } from 'lucide-react';
 
 export default function Home() {
 
@@ -187,18 +187,8 @@ export default function Home() {
             </motion.div>
           </motion.div>
           <div className='flex justify-center gap-5'>
-            <button
-
-              className='p-2 bg-white text-black rounded-md font-bold'
-            >
-              ⬅️ Drag to side
-            </button>
-            <button
-
-              className='p-2 bg-white text-black rounded-md font-bold'
-            >
-              Drag to side ➡️
-            </button>
+            <ArrowLeft />
+            <ArrowRight />
           </div>
         </div>
       </div>
