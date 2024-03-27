@@ -65,7 +65,7 @@ export default function Home() {
           </div>
           <div className="relative top-10 left-0 z-10 text-black p-10 mb-4 w-full sm:w-full md:w-1/2 sm:p-15 sm:top-20 md:text-white md:absolute">
             <p className="text-sm sm:text-base font-light">Innovative designs, lasting flooring solutions</p>
-            <h1 className="text-4xl sm:text-5xl font-bold">Elevate Your Space With Superior Floors</h1>
+            <h1 className="text-4xl sm:text-5xl font-bold">Elevate Your Space With Superior Floors And Installation</h1>
             <p className="mt-2 text-sm sm:text-base font-light">
               Explore vinyl flooring, known for its quality and durability. Ideal for renovations or new constructions, it offers a stylish, reliable solution that withstands heavy use without compromising aesthetics.
             </p>
@@ -100,53 +100,54 @@ export default function Home() {
           </div>
         </div>
         <div className="p-10 text-white text-center my-24">
-          <h1 className="text-3xl font-bold text-red-400">Why choose us?</h1>
+          <h1 className="text-4xl font-bold text-black">Why choose us?</h1>
           <p className="w-full mx-auto mt-2">
             We offer superior services, dedicated customer support, and competitive pricing. Our team of professionals is committed to ensuring your satisfaction.
           </p>
           <div className="flex flex-col flex-wrap md:flex-nowrap justify-center gap-5 mt-10">
             <div className="flex flex-row flex-wrap md:flex-nowrap justify-center gap-5">
-              <div className="card rounded-lg border-red-100 border-2 p-10 w-[340px] hover:scale-[1.05] transition-all ease-in">
-                <h1 className="text-red-600 font-bold my-2">Expert Craftsmanship</h1>
+              <div className="card rounded-lg p-10 w-[340px] hover:scale-[1.05] transition-all ease-in">
+                <h1 className="text-black font-bold my-2">Expert Craftsmanship</h1>
                 <hr />
-                <p className="my-2 text-red-400">
+                <p className="my-2 text-black">
                   Emphasize the high level of skills and attention to details in your flooring installations
                 </p>
               </div>
-              <div className="card rounded-lg border-red-100 border-2 p-10 w-[340px] hover:scale-[1.05] transition-all ease-in">
-                <h1 className="text-red-600 font-bold my-2">Exemplary Customer Service</h1>
+              <div className="card rounded-lg p-10 w-[340px] hover:scale-[1.05] transition-all ease-in">
+                
+                <h1 className="text-black font-bold my-2">Exemplary Customer Service</h1>
                 <hr />
-                <p className="my-2 text-red-400">
+                <p className="my-2 text-black">
                   Our team is dedicated to ensuring the total satisfaction of our customers, providing high quality service.
                 </p>
               </div>
-              <div className="card rounded-lg border-red-100 border-2 p-10 w-[340px] hover:scale-[1.05] transition-all ease-in">
-                <h1 className="text-red-600 font-bold my-2">High Quality Materials</h1>
+              <div className="card rounded-lg p-10 w-[340px] hover:scale-[1.05] transition-all ease-in">
+                <h1 className="text-black font-bold my-2">High Quality Materials</h1>
                 <hr />
-                <p className="my-2 text-red-400">
+                <p className="my-2 text-black">
                   We only use top-tier materials in our installations, ensuring durability and beauty.
                 </p>
               </div>
             </div>
             <div className="flex flex-row flex-wrap md:flex-nowrap justify-center gap-10">
-              <div className="card rounded-lg border-red-100 border-2 p-10 w-[340px] hover:scale-[1.05] transition-all ease-in">
-                <h1 className="text-red-600 font-bold my-2">Proven Experience</h1>
+              <div className="card rounded-lg p-10 w-[340px] hover:scale-[1.05] transition-all ease-in">
+                <h1 className="text-black font-bold my-2">Proven Experience</h1>
                 <hr />
-                <p className="my-2 text-red-400">
+                <p className="my-2 text-black">
                   With years of experience in the market, we have the necessary knowledge to execute all projects with excellence.
                 </p>
               </div>
-              <div className="card rounded-lg border-red-100 border-2 p-10 w-[340px] hover:scale-[1.05] transition-all ease-in">
-                <h1 className="text-red-600 font-bold my-2">Competitive Prices</h1>
+              <div className="card rounded-lg p-10 w-[340px] hover:scale-[1.05] transition-all ease-in">
+                <h1 className="text-black font-bold my-2">Competitive Prices</h1>
                 <hr />
-                <p className="my-2 text-red-400">
+                <p className="my-2 text-black">
                   We offer fair prices without compromising the quality of our work.
                 </p>
               </div>
-              <div className="card rounded-lg border-red-100 border-2 p-10 w-[340px] hover:scale-[1.05] transition-all ease-in">
-                <h1 className="text-red-600 font-bold my-2">Compliance with Deadlines</h1>
+              <div className="card rounded-lg p-10 w-[340px] hover:scale-[1.05] transition-all ease-in">
+                <h1 className="text-black font-bold my-2">Compliance with Deadlines</h1>
                 <hr />
-                <p className="my-2 text-red-400">
+                <p className="my-2 text-black">
                   We respect established deadlines, ensuring the completion of projects on time.
                 </p>
               </div>
