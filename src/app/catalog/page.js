@@ -5,7 +5,9 @@ import HeaderComponent from "../components/header/header";
 import data from "./data.js";
 import { Star } from 'lucide-react';
 import { redirect } from 'next/dist/server/api-utils';
+import Banner from '@/../public/banner.svg';
 import FooterComponent from '../components/footer/footer';
+import Image from 'next/image';
 
 
 export default function CatalogPage() {
@@ -38,11 +40,14 @@ export default function CatalogPage() {
      return (
           <section>
                <HeaderComponent />
+               <div className="w-f">
+                    <Image src={Banner} alt="Banner" className='w-full' />
+               </div>
                <div className='my-10'>
                     <div className="w-screen">
                          <div className="text-center text-black">
                               <h1 className="text-2xl font-bold mt-10">Step into Style: Your Premier Flooring Destination</h1>
-                              
+
                          </div>
                          <div className="flex flex-col justify-center w-1/2 mx-auto">
                               <input

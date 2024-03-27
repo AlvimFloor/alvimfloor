@@ -23,12 +23,11 @@ import imagem13 from './assets/portifolio/imagem13.jpeg';
 import imagem14 from './assets/portifolio/imagem14.jpeg';
 import imagem15 from './assets/portifolio/imagem15.jpeg';
 import emailjs from '@emailjs/browser';
-
+import { ArrowLeft, ArrowRight } from 'lucide-react';
 
 export default function Home() {
 
   const imagens = [imagem1, imagem2, imagem3, imagem4, imagem5, imagem6, imagem7, imagem8, imagem9, imagem10, imagem11, imagem12, imagem13, imagem14, imagem15];
-
 
   const carousel = useRef();
   const [width, setWidth] = useState(0);
@@ -38,6 +37,17 @@ export default function Home() {
     setWidth(carousel.current?.scrollWidth - carousel.current?.offsetWidth + 1)
   }, [])
 
+  const handleCarouselScroll = () => {
+    const scrollPosition = carousel.current.scrollLeft;
+    const fullWidth = carousel.current.scrollWidth;
+    const visibleWidth = carousel.current.offsetWidth;
+
+    if (scrollPosition === fullWidth - visibleWidth) {
+      carousel.current.scrollLeft = 0;
+    } else if (scrollPosition === 0) {
+      carousel.current.scrollLeft = width;
+    }
+  };
 
   const form = useRef();
 
@@ -76,8 +86,8 @@ export default function Home() {
             </button>
           </div>
         </div>
-        <div className="flex p-10 justify-center  gap-10 my-32 ">
-          <div className="hidden md:block sm:hidden">
+        <div className="flex flex-col md:flex-row p-10 justify-center  gap-10 my-32 ">
+          <div className=" md:block sm:hidden">
             <Image src={LandingPageImage1} alt="Landing Page Image 1" />
           </div>
           <div className="text-black  text-center md:text-left md:w-1/2">
@@ -99,9 +109,9 @@ export default function Home() {
             </button>
           </div>
         </div>
-        <div className="p-10 text-white text-center my-24">
-          <h1 className="text-4xl font-bold text-black">Why choose us?</h1>
-          <p className="w-full mx-auto mt-2">
+        <div className="p-10 text-center my-24">
+          <h1 className="text-3xl font-bold text-red-400">Why choose us?</h1>
+          <p className="w-full mx-auto mt-2 text-black">
             We offer superior services, dedicated customer support, and competitive pricing. Our team of professionals is committed to ensuring your satisfaction.
           </p>
           <div className="flex flex-col flex-wrap md:flex-nowrap justify-center gap-5 mt-10">
@@ -159,13 +169,15 @@ export default function Home() {
           <p className='text-center italic'>Drag to side</p>
           <motion.div ref={carousel}
             className='carousel'
-            whileTap={{ cursor: "grabbing" }}>
+            whileTap={{ cursor: "grabbing" }}
+            onScroll={handleCarouselScroll}
+          >
             <motion.div
               className='inner'
               drag="x"
               dragConstraints={{ right: width + 1, left: -width }}
-              initial={{ x: 200 }}
-              animate={{ x: 0 }}
+              initial={{ x: 0 }}
+              animate={{ x: 50 }}
               transition={{ duration: 0.8 }}
             >
               {imagens.map(imagens => (
@@ -175,9 +187,11 @@ export default function Home() {
               ))}
             </motion.div>
           </motion.div>
-
+          <div className='flex justify-center gap-5'>
+            <ArrowLeft />
+            <ArrowRight />
+          </div>
         </div>
-
       </div>
       <div className="flex flex-col justify-center bg-[#efefef]  p-10 py-32">
         <p className="text-2xl text-center italic text-black">

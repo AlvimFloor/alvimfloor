@@ -50,7 +50,7 @@ export default function Page({ params }) {
           <section>
                <HeaderComponent />
                <div className="p-10">
-                    <div className="text-black my-10 h-screen">
+                    <div className="text-black my-10 h-[100v]">
                          {floor.length !== 0 ? (
                               <div>
                                    <h1 className="text-4xl font-bold text-center mb-5">{floor.floor_name}</h1>
@@ -99,7 +99,7 @@ export default function Page({ params }) {
                               </div>
                          ) : null}
                     </div>
-                    <div>
+                    <div className="mt-20">
                          <h1 className="text-black text-2xl font-semibold ">Others floors you may like</h1>
                          <div className="flex justify-around flex-wrap">
                               {
