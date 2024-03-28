@@ -21,10 +21,9 @@ export default function FooterComponent() {
                          </div>
                          <div>
                               <ul>
-                                   <li>WhatsApp</li>
-                                   <li>Facebook</li>
-                                   <li>Instagram</li>
-                              </ul>
+                                  <li> <a href="https://www.facebook.com/people/Alvim-Floors/pfbid0uuhPJdoaPckMzcKk5iXtYqvSoCQB8gfZDUM4tpggAAWhKhKhaXz5BCQC8fNG81b6l/" class="font-medium">Facebook</a></li>
+                                  <li> <a href="https://www.instagram.com/alvimfloors/" class="font-medium">Instagram</a></li>
+                               </ul>
                          </div>
                     </div>
                </div>
