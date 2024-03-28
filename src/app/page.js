@@ -75,7 +75,7 @@ export default function Home() {
           </div>
           <div className="relative top-10 left-0 z-10 text-black p-10 mb-4 w-full sm:w-full md:w-1/2 sm:p-15 sm:top-20 md:text-white md:absolute">
             <p className="text-sm sm:text-base font-light">Innovative designs, lasting flooring solutions</p>
-            <h1 className="text-4xl sm:text-5xl font-bold">Elevate Your Space With Superior Floors And Installation</h1>
+            <h1 className="text-4xl sm:text-5xl font-bold">Empower your space with the freedom to choose your dream floor, and let us bring it to life with our expert installation services.</h1>
             <p className="mt-2 text-sm sm:text-base font-light">
               Explore vinyl flooring, known for its quality and durability. Ideal for renovations or new constructions, it offers a stylish, reliable solution that withstands heavy use without compromising aesthetics.
             </p>
@@ -110,7 +110,7 @@ export default function Home() {
           </div>
         </div>
         <div className="p-10 text-center my-24">
-          <h1 className="text-3xl font-bold text-red-400">Why choose us?</h1>
+          <h1 className="text-3xl font-bold text-red-500">Why choose us?</h1>
           <p className="w-full mx-auto mt-2 text-black">
             We offer superior services, dedicated customer support, and competitive pricing. Our team of professionals is committed to ensuring your satisfaction.
           </p>
