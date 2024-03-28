@@ -73,9 +73,9 @@ export default function Home() {
           <div className="w-full">
             <Image src={Banner} alt="Banner" className='w-full' />
           </div>
-          <div className="relative top-10 left-0 z-10 text-black p-10 mb-4 w-full sm:w-full md:w-1/2 sm:p-15 sm:top-20 md:text-white md:absolute">
+          <div className="relative top-10 left-0 z-10 text-black p-10 mb-4 w-full sm:w-full md:w-1/2 sm:p-15  md:text-white md:absolute">
             <p className="text-sm sm:text-base font-light">Innovative designs, lasting flooring solutions</p>
-            <h1 className="text-4xl sm:text-5xl font-bold">Empower your space with the freedom to choose your dream floor, and let us bring it to life with our expert installation services.</h1>
+            <h1 className="text-3xl sm:text-4xl font-bold">Empower your space with the freedom to choose your dream floor, and let us bring it to life with our expert installation services.</h1>
             <p className="mt-2 text-sm sm:text-base font-light">
               Explore vinyl flooring, known for its quality and durability. Ideal for renovations or new constructions, it offers a stylish, reliable solution that withstands heavy use without compromising aesthetics.
             </p>
